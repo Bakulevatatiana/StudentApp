@@ -10,7 +10,6 @@ import lombok.Data;
 @Entity
 public class Group {
 
-
     @Id
     @GeneratedValue
     private long id;
