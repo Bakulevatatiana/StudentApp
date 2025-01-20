@@ -1,4 +1,4 @@
 package me.bakuleva.studentapp.services;
 
-public class CroupService {
+public class CroupServiceImpl {
 }

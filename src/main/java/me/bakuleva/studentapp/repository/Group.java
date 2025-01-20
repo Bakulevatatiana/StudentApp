@@ -1,4 +1,10 @@
 package me.bakuleva.studentapp.repository;
 
-public interface Group {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+public interface Group extends JpaRepository<Group, Long> {
+
 }
