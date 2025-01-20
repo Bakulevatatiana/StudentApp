@@ -14,6 +14,7 @@ public class Group {
     @Id
     @GeneratedValue
     private long id;
+
     @Column(name ="group_name")
     private String groupName;
     @Column(name ="departments")
