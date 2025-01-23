@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name ="studentt")
+@Table(schema = "student", name = "studentt")
 
 public class Student {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-  @Column(name ="sur_name", nullable = false)
+    @Column(name = "sur_name", nullable = false)
     private String surName;
     @Column(name = "name", nullable = false)
     private String name;
@@ -31,8 +31,6 @@ public class Student {
     private String gender;
     @Column(name = "student_status", nullable = false)
     private String studentStatus;
-  @Column(name = "course_number")
+    @Column(name = "course_number")
     private int courseNumber;
-
-
 }

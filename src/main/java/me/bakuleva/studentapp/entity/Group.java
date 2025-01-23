@@ -7,24 +7,23 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "groupp")
+@Table(schema = "student", name = "groupp")
 public class Group {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-   @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-   private List<Student> students=new ArrayList<>();
-    @Column(name ="group_name")
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Student> students = new ArrayList<>();
+    @Column(name = "group_name")
     private String groupName;
-    @Column(name ="departments")
-    private String departments;
-    @Column(name ="enrollment")
-    private  int enrollment;
-
-
+    @Column(name = "departments")
+    private String department;
+    @Column(name = "enrollments")
+    private int enrollment;
 }
